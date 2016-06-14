@@ -3,7 +3,8 @@ library(sqldf)
 library(ggplot2)
 
 #load the data
-data <- read.csv(file='c://data/01-ria.mt_2016-05-01.tsv', header = FALSE, sep = '\t')
+fileLocation <- 'c://data/01-ria.mt_2016-05-01.tsv'
+data <- read.csv(file='fileLocation, header = FALSE, sep = '\t')
 #remove blank columns
 data <- Filter(function(x)!all(is.na(x)), data)
 
